@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN AND SIGN-IN</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="circle large"></div>
+    <div class="circle small"></div>
+    <div class="rectangle"></div>
+    <div class="container">
+        <div class="form-section">
+            <h1>Expense tracker</h1>
+            <div class="form-container">
+                <h2>Login/Sign-in</h2>
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <button type="button" id="register-btn">Register</button>
+                    <button type="button" id="login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="expanse.jpg" alt="Illustration">
+        </div>
+    </div>
+   
+</body>
+</html>

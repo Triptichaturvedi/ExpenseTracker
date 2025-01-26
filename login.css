@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(190, 149, 196);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgb(94, 84, 142);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+.form-section {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-section h1 {
+    color: rgb(94, 84, 142);
+    margin-bottom: 20px;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(94, 84, 142);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color:rgb(35, 25, 66);
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color:rgb(35, 25, 66);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.image-section {
+    background-color:rgb(190, 149, 196);
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .image-section {
+        display: flex;
+        width: 50%;
+    }
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Background shapes */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(94, 84, 142);
+    z-index: 0;
+}
+
+.circle.large {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: -150px;
+}
+
+.circle.small {
+    width: 150px;
+    height: 150px;
+    bottom: 10%;
+    right: -75px;
+}
+
+.rectangle {
+    position: absolute;
+    background-color: rgb(94, 84, 142);
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    right: -100px;
+    transform: rotate(45deg);
+    z-index: 0;
+}

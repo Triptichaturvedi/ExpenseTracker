@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f2fb;
+            color: #4e2a84;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #7f4b8b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ede0f5;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .input-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        input[type="number"], input[type="text"], button {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #7f4b8b;
+            width: 48%;
+        }
+        input[type="number"], input[type="text"] {
+            background-color: #f9f1f9;
+        }
+        button {
+            background-color: #b96fbb;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #9a509a;
+        }
+        .expense-list {
+            list-style: none;
+            padding: 0;
+        }
+        .expense-list li {
+            background-color: #e8c9f7;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .expense-list li span {
+            margin-right: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1rem;
+            color:rgb(94, 84, 142);
+        }
+        .notification {
+            background-color: #f5d0d0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #9d3b3b;
+            font-weight: bold;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Expense Tracker</h1>
+</header>
+
+<div class="container">
+    <div class="input-section">
+        <input type="number" id="salary" placeholder="Enter your amount">
+        <button onclick="setSalary()">Set Amount</button>
+    </div>
+
+    <div class="input-section">
+        <input type="text" id="expenseName" placeholder="Enter expense name">
+        <input type="number" id="expenseAmount" placeholder="Enter expense amount">
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <ul class="expense-list" id="expenseList"></ul>
+
+    <div id="remainingAmount">
+        <p>Amount Left to Spend: <span id="leftAmount">0</span></p>
+    </div>
+
+    <div id="notification" class="notification">
+        You have exceeded your budget! Please manage your spending.
+    </div>
+
+</div>
+
+<script>
+    let salary = 0;
+    let expenses = [];
+
+    function setSalary() {
+        salary = parseFloat(document.getElementById("salary").value);
+        if (isNaN(salary) || salary <= 0) {
+            alert("Please enter a valid salary!");
+            return;
+        }
+        document.getElementById("leftAmount").innerText = salary;
+        document.getElementById("salary").disabled = true;
+        alert("Salary set successfully!");
+    }
+
+    function addExpense() {
+        const expenseName = document.getElementById("expenseName").value;
+        const expenseAmount = parseFloat(document.getElementById("expenseAmount").value);
+
+        if (!expenseName || isNaN(expenseAmount) || expenseAmount <= 0) {
+            alert("Please enter a valid expense!");
+            return;
+        }
+
+        expenses.push({ name: expenseName, amount: expenseAmount });
+        updateExpenseList();
+        updateRemainingAmount();
+    }
+
+    function updateExpenseList() {
+        const expenseList = document.getElementById("expenseList");
+        expenseList.innerHTML = "";
+
+        expenses.forEach(expense => {
+            const li = document.createElement("li");
+            li.innerHTML = `${expense.name}: $${expense.amount.toFixed(2)}`;
+            expenseList.appendChild(li);
+        });
+    }
+
+    function updateRemainingAmount() {
+        const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+        const remaining = salary - totalExpenses;
+        document.getElementById("leftAmount").innerText = remaining.toFixed(2);
+
+        // Notification if expenses exceed salary
+        if (remaining < 0) {
+            document.getElementById("notification").style.display = "block";
+        } else {
+            document.getElementById("notification").style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

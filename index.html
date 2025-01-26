@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        :root {
+            --russian-violet: #32127a;
+            --african-violet: #b284be;
+            --ultra-violet: #645394;
+            --lilac: #c8a2c8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--russian-violet), var(--african-violet));
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--ultra-violet);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--lilac);
+            color: var(--russian-violet);
+        }
+
+        .main-content {
+            text-align: center;
+            margin-top: 8rem;
+        }
+
+        .main-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .main-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: var(--lilac);
+            color: var(--russian-violet);
+            padding: 0.75rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <nav>
+            <a href="login.html">Login/Sign Up</a>
+            <a href="about.html">About</a>
+            <a href="tc.html">Terms & Conditions</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h2>Track Your Expenses with Ease</h2>
+        <p>Manage your personal finances effortlessly with our user-friendly expense tracker.</p>
+        <a href="mainpage.html"><button class="cta-button">GET STARTED</button></a>
+    </main>
+</body>
+</html>

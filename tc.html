@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        :root {
+            --lilac: #c8a2c8;
+            --pink-lavender: #d8b2d1;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, var(--lilac), var(--pink-lavender));
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--lilac);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .submit-btn {
+            background-color: var(--lilac);
+            color: #fff;
+        }
+
+        .exit-btn {
+            background-color: var(--pink-lavender);
+            color: #fff;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .checkbox input {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TERMS AND CONDITIONS</h1>
+    <BR>
+        <P>
+            Welcome to EXPENSE TRACKER! These Terms and Conditions  govern your use of our Website and services. By accessing or using our Website, you agree to be bound by these Terms. If you do not agree with these Terms, please do not use the Website.
+            <BR>
+
+<b><u>1. Acceptance of Terms:</u></b>
+By creating an account or accessing the Website, you agree to comply with these Terms and Conditions. You represent that you are at least 13 years old and legally able to enter into these Terms. If you do not meet these requirements, please refrain from using our Services.
+<BR>
+
+<b><u>2. Description of Services:</b></u>
+Expense Tracker Website provides tools and features to help users track their financial budget, expenses, and income. The Services include budgeting tools, financial reports, and related information.
+<BR>
+
+<b><u>3. Account Registration and Security:</u></b>
+Account Registration: To use certain features of our Services, you must create an account by providing accurate and complete information.
+Account Security: You are responsible for maintaining the confidentiality of your account information and password. You agree to notify us immediately of any unauthorized access to or use of your account.
+Termination of Account: We reserve the right to terminate or suspend your account at any time for any reason, including violation of these Terms.
+<BR>
+<b><u>4. User Conduct:</u></b>
+You agree not to:
+Use the Services for any illegal purpose or in violation of any local, state, national, or international law.
+Distribute viruses or any other technologies that may harm the Website or the interests of other users.
+Attempt to gain unauthorized access to other accounts or networks connected to the Website.
+<BR>
+<b><u>5. Privacy Policy:</u></b>
+Your privacy is important to us. Please review our Privacy Policy, which explains how we collect, use, and protect your personal information. By using the Website, you consent to our collection and use of your data as outlined in the Privacy Policy.
+<BR>
+
+<b><u>6. User Data and Security:</u></b>
+Data Collection: We collect and store information you provide, such as financial data, which may include budgets, income, and expenses.
+Data Security: While we take reasonable measures to protect your data, we cannot guarantee complete security. You acknowledge that you use the Website at your own risk and are responsible for securing your personal and financial information.
+<BR>
+<b><u>7. Intellectual Property:</u></b>
+Ownership: The Website and its contents, including but not limited to text, graphics, logos, and software, are the property of [Your Company Name] and are protected by intellectual property laws.
+User Rights: You are granted a limited, non-exclusive, and revocable license to use the Website and its Services for personal, non-commercial use only. You may not copy, modify, or distribute any part of the Website without our written permission.
+<BR>
+<b><u>8. Subscription Fees and Payment:</u></b>
+If applicable, subscription fees for premium features or other paid services will be clearly displayed on the Website. All payments are final and non-refundable unless otherwise stated. We reserve the right to change our subscription fees at any time, with advance notice to users.
+<BR>
+
+<b><u>9. Third-Party Links and Content:</u></b>
+Our Website may contain links to third-party websites and content. We are not responsible for the content or accuracy of any third-party websites or services, nor do we endorse them. Use of third-party websites is at your own risk.
+<BR>
+
+
+<b><u>10. Disclaimer of Warranties:</u></b>
+The Website and Services are provided "as-is" and "as available." We make no warranties or representations regarding the accuracy, reliability, or completeness of any information or services provided. Your use of the Website is at your sole risk.
+<BR>
+
+<b><u>11. Limitation of Liability:</u></b>
+In no event shall [Your Company Name] or its affiliates be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of the Website or its Services.
+<BR>
+
+<b><u>12. Indenification:</u></b>
+You agree to indenify and hold BUDGET TRACKER harmless from any claims, liabilities, damages, or expenses arising from your use of the Website or your violation of these Terms.
+<BR>
+
+<b><u>13. Modifications to Terms:</u></b>
+We may update these Terms from time to time. We will notify you of any significant changes by posting the new Terms on the Website or by other means. Your continued use of the Website after the effective date of the updated Terms constitutes your acceptance.
+        </P>
+
+
+        <div class="checkbox">
+            <input type="checkbox" id="accept" name="accept">
+            <label for="accept">I accept the terms and conditions</label>
+        </div>
+        <div class="actions">
+            <button class="submit-btn" onclick="submitTerms()">Submit</button>
+            <button class="exit-btn" onclick="exitPage()">Exit</button>
+        </div>
+    </div>
+
+    <script>
+        function submitTerms() {
+            const checkbox = document.getElementById('accept');
+            if (checkbox.checked) {
+                alert('Thank you for accepting the terms and conditions!');
+            } else {
+                alert('Please accept the terms and conditions before submitting.');
+            }
+        }
+
+        function exitPage() {
+            window.location.href = '/'; // Redirect to homepage or another page
+        }
+    </script>
+</body>
+</html>
